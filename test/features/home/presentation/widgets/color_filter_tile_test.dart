@@ -1,9 +1,9 @@
+import 'package:color_generator/features/home/domain/color_filters.dart';
+import 'package:color_generator/features/home/presentation/controllers/color_filters_controller.dart';
+import 'package:color_generator/features/home/presentation/widgets/color_filter_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_task/features/home/domain/color_filters.dart';
-import 'package:test_task/features/home/presentation/controllers/color_filters_controller.dart';
-import 'package:test_task/features/home/presentation/widgets/color_filter_tile.dart';
 
 const _filter = ColorFilters.grayTones;
 

@@ -1,10 +1,10 @@
+import 'package:color_generator/features/core/presentation/widgets/custom_floating_action_button.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/favorite_colors_controller.dart';
+import 'package:color_generator/features/home/presentation/controllers/background_color_controller.dart';
+import 'package:color_generator/features/home/presentation/widgets/floating_action_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_task/features/core/presentation/widgets/custom_floating_action_button.dart';
-import 'package:test_task/features/favorites/presentation/controllers/favorite_colors_controller.dart';
-import 'package:test_task/features/home/presentation/controllers/background_color_controller.dart';
-import 'package:test_task/features/home/presentation/widgets/floating_action_buttons.dart';
 
 const _color = Colors.pink;
 

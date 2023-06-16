@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:test_task/features/favorites/presentation/pages/favorites_page.dart';
-import 'package:test_task/features/home/presentation/pages/home_page.dart';
+
+import '../../favorites/presentation/pages/favorites_page.dart';
+import '../../home/presentation/pages/home_page.dart';
 
 class Router {
   static const String _title = 'Find Your Colors';

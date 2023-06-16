@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_task/features/core/constants/custom_gradient.dart';
+
+import '../../../core/constants/custom_gradient.dart';
 
 class ShadedText extends StatelessWidget {
   const ShadedText(

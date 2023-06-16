@@ -1,6 +1,6 @@
+import '../../../core/domain/extensions/color_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_task/features/core/domain/extensions/color_extension.dart';
 
 class CopyableColorTile extends StatelessWidget {
   const CopyableColorTile({

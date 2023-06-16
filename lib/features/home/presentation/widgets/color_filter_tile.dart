@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_task/features/home/domain/color_filters.dart';
 
+import '../../domain/color_filters.dart';
 import '../controllers/color_filters_controller.dart';
 
 class ColorFilterTile extends ConsumerWidget {

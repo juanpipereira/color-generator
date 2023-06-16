@@ -1,6 +1,6 @@
+import 'selected_color_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:test_task/features/favorites/presentation/controllers/selected_color_controller.dart';
 part 'favorite_colors_controller.g.dart';
 
 @Riverpod(keepAlive: true)

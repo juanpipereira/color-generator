@@ -1,7 +1,7 @@
+import 'package:color_generator/features/core/constants/custom_gradient.dart';
+import 'package:color_generator/features/home/presentation/widgets/shaded_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_task/features/core/constants/custom_gradient.dart';
-import 'package:test_task/features/home/presentation/widgets/shaded_text.dart';
 
 void main() {
   testWidgets(

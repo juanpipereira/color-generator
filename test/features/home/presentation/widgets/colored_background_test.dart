@@ -1,8 +1,8 @@
+import 'package:color_generator/features/home/presentation/controllers/background_color_controller.dart';
+import 'package:color_generator/features/home/presentation/widgets/colored_background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_task/features/home/presentation/controllers/background_color_controller.dart';
-import 'package:test_task/features/home/presentation/widgets/colored_background.dart';
 
 const _color = Colors.pink;
 

@@ -1,7 +1,7 @@
+import 'package:color_generator/features/core/domain/extensions/color_extension.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/copyable_color_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:test_task/features/core/domain/extensions/color_extension.dart';
-import 'package:test_task/features/favorites/presentation/widgets/copyable_color_tile.dart';
 
 void main() {
   testWidgets(

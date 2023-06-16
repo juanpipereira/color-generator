@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:test_task/features/core/presentation/widgets/custom_appbar.dart';
-import 'package:test_task/features/core/presentation/widgets/custom_drawer.dart';
-import 'package:test_task/features/home/presentation/widgets/colored_background.dart';
-import 'package:test_task/features/home/presentation/widgets/shaded_text.dart';
 
+import '../../../core/presentation/widgets/custom_appbar.dart';
+import '../../../core/presentation/widgets/custom_drawer.dart';
+import '../widgets/colored_background.dart';
 import '../widgets/floating_action_buttons.dart';
+import '../widgets/shaded_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

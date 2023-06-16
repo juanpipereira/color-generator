@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_task/features/favorites/presentation/controllers/selected_color_controller.dart';
+
+import '../controllers/selected_color_controller.dart';
 
 class ColorPreview extends StatelessWidget {
   const ColorPreview({super.key});
