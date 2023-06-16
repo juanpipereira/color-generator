@@ -10,7 +10,7 @@ main() {
       const title = 'Main Title';
 
       await tester.pumpWidget(
-        MaterialApp(
+        const MaterialApp(
           home: Scaffold(
             appBar: CustomAppbar(
               pageTitle: pageTitle,

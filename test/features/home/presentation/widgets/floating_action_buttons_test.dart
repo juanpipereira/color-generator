@@ -28,8 +28,11 @@ void main() {
     'Floating Action Buttons Items',
     () {
       testWidgets(
-        'should show filter and favorites floating action buttons if background color is set',
+        '''
+        should show filter and favorites floating action buttons if background 
+        color is set''',
         (tester) async {
+          const amountOfWidgets = 2;
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
@@ -46,12 +49,17 @@ void main() {
 
           await tester.pumpAndSettle();
 
-          expect(find.byType(CustomFloatingActionButton), findsNWidgets(2));
+          expect(
+            find.byType(CustomFloatingActionButton),
+            findsNWidgets(amountOfWidgets),
+          );
         },
       );
 
       testWidgets(
-        'should show only filter floating action button if background color is not set',
+        '''
+        should show only filter floating action button if background 
+        color is not set''',
         (tester) async {
           await tester.pumpWidget(
             ProviderScope(
@@ -79,7 +87,9 @@ void main() {
     'Correct Favorite Floating Action Button',
     () {
       testWidgets(
-        'should show the favorites floating action button as active if background color is in favorites',
+        '''
+        should show the favorites floating action button as active if background 
+        color is in favorites''',
         (tester) async {
           await tester.pumpWidget(
             ProviderScope(
@@ -111,8 +121,11 @@ void main() {
         },
       );
 
+      // ignore: lines_longer_than_80_chars
       testWidgets(
-        'should show the favorites floating action button as inactive if background color is not in favorites',
+        '''
+        should show the favorites floating action button as inactive if background 
+        color is not in favorites''',
         (tester) async {
           await tester.pumpWidget(
             ProviderScope(

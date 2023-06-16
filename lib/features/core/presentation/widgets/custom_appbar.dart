@@ -8,9 +8,9 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   static const double _elevation = 7.0;
+  static const double _pageTitleSeparation = 12.0;
   static const double _titleFontSize = 12.0;
   static const double _titleSeparation = 1.0;
-  static const double _pageTitleSeparation = 12.0;
 
   final String pageTitle;
   final String title;
@@ -18,7 +18,6 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   PreferredSizeWidget build(BuildContext context) {
     return AppBar(
-      // backgroundColor: Theme.of(context).colorScheme.onSurface,
       backgroundColor: Theme.of(context).colorScheme.primary,
       foregroundColor: Theme.of(context).colorScheme.background,
       elevation: _elevation,

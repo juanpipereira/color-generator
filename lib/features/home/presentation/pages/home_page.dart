@@ -1,10 +1,9 @@
+import 'package:color_generator/features/core/presentation/widgets/custom_appbar.dart';
+import 'package:color_generator/features/core/presentation/widgets/custom_drawer.dart';
+import 'package:color_generator/features/home/presentation/widgets/colored_background.dart';
+import 'package:color_generator/features/home/presentation/widgets/floating_action_buttons.dart';
+import 'package:color_generator/features/home/presentation/widgets/shaded_text.dart';
 import 'package:flutter/material.dart';
-
-import '../../../core/presentation/widgets/custom_appbar.dart';
-import '../../../core/presentation/widgets/custom_drawer.dart';
-import '../widgets/colored_background.dart';
-import '../widgets/floating_action_buttons.dart';
-import '../widgets/shaded_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({

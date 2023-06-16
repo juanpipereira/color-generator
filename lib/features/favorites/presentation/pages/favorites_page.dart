@@ -1,13 +1,12 @@
+import 'package:color_generator/features/core/presentation/widgets/custom_appbar.dart';
+import 'package:color_generator/features/core/presentation/widgets/custom_drawer.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/selected_color_controller.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/color_preview.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/copyable_color_tile.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/favorite_color_list.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/option_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../core/presentation/widgets/custom_appbar.dart';
-import '../../../core/presentation/widgets/custom_drawer.dart';
-import '../controllers/selected_color_controller.dart';
-import '../widgets/color_preview.dart';
-import '../widgets/copyable_color_tile.dart';
-import '../widgets/favorite_color_list.dart';
-import '../widgets/option_buttons.dart';
 
 class FavoritesPage extends StatelessWidget {
   const FavoritesPage({
@@ -15,7 +14,9 @@ class FavoritesPage extends StatelessWidget {
     required this.title,
   });
 
-  static const _pageTitle = 'Favorite Colors';
+  static const double _extraButtonsHeight = 80.0;
+  static const String _pageTitle = 'Favorite Colors';
+  static const double _titleFontSize = 24.0;
 
   final String title;
 
@@ -35,7 +36,7 @@ class FavoritesPage extends StatelessWidget {
           Text(
             'Copy a color you like',
             style: TextStyle(
-              fontSize: 24.0,
+              fontSize: _titleFontSize,
               color: Theme.of(context).colorScheme.secondary,
               fontWeight: FontWeight.w400,
             ),
@@ -44,9 +45,10 @@ class FavoritesPage extends StatelessWidget {
           Consumer(
             builder: (_, ref, __) {
               final selectedColor = ref.watch(selectedColorControllerProvider);
+
               return selectedColor == null
                   ? SizedBox(
-                      height: 80.0,
+                      height: _extraButtonsHeight,
                       child: Text(
                         'Select a color to preview it',
                         style: TextStyle(
@@ -59,11 +61,12 @@ class FavoritesPage extends StatelessWidget {
           ),
           const Spacer(flex: 7),
           SizedBox(
-            height: 80.0,
+            height: _extraButtonsHeight,
             child: Consumer(
               builder: (_, ref, __) {
                 final selectedColor =
                     ref.watch(selectedColorControllerProvider);
+
                 return selectedColor != null
                     ? OptionButtons(selectedColor: selectedColor)
                     : const SizedBox.shrink();

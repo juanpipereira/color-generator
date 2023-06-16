@@ -58,7 +58,7 @@ void main() {
       expect(
         find.byWidgetPredicate(
           (widget) {
-            return widget is Container && widget.color == color;
+            return widget is ColoredBox && widget.color == color;
           },
         ),
         findsOneWidget,
@@ -75,9 +75,9 @@ void main() {
             backgroundColorControllerProvider
                 .overrideWith(_MockBackgroundColorController.new),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Scaffold(
-              body: const ColoredBackground(),
+              body: ColoredBackground(),
             ),
           ),
         ),
@@ -88,7 +88,7 @@ void main() {
       expect(
         find.byWidgetPredicate(
           (widget) {
-            return widget is Container && widget.color == _color;
+            return widget is ColoredBox && widget.color == _color;
           },
         ),
         findsOneWidget,

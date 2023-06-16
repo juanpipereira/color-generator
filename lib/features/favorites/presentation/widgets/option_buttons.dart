@@ -1,9 +1,8 @@
+import 'package:color_generator/features/core/presentation/widgets/custom_outlined_icon_button.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/favorite_colors_controller.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/selected_color_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../core/presentation/widgets/custom_outlined_icon_button.dart';
-import '../controllers/favorite_colors_controller.dart';
-import '../controllers/selected_color_controller.dart';
 
 class OptionButtons extends ConsumerWidget {
   const OptionButtons({

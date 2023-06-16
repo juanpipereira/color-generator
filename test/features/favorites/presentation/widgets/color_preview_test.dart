@@ -8,8 +8,8 @@ void main() {
     'should show the preview image',
     (tester) async {
       await tester.pumpWidget(
-        ProviderScope(
-          child: const MaterialApp(
+        const ProviderScope(
+          child: MaterialApp(
             home: Scaffold(body: ColorPreview()),
           ),
         ),
@@ -19,7 +19,7 @@ void main() {
 
       expect(
         find.image(
-          AssetImage(
+          const AssetImage(
             'assets/images/profile-pic-background-removed.png',
           ),
         ),

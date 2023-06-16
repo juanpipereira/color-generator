@@ -32,6 +32,7 @@ void main() {
             find.byWidgetPredicate(
               (widget) {
                 return widget is Container &&
+                    widget.decoration != null &&
                     (widget.decoration as BoxDecoration).color == color;
               },
             ),
@@ -72,7 +73,9 @@ void main() {
             find.byWidgetPredicate(
               (widget) {
                 if (widget is! Container) return false;
-                BoxConstraints width = widget.constraints!.widthConstraints();
+                final width = widget.constraints?.widthConstraints();
+                if (width == null) return false;
+
                 return (width.minWidth == width.maxWidth) &&
                     (width.minWidth == maxSize);
               },
@@ -108,7 +111,9 @@ void main() {
             find.byWidgetPredicate(
               (widget) {
                 if (widget is! Container) return false;
-                BoxConstraints width = widget.constraints!.widthConstraints();
+                final width = widget.constraints?.widthConstraints();
+                if (width == null) return false;
+
                 return (width.minWidth == width.maxWidth) &&
                     (width.minWidth == minSize);
               },

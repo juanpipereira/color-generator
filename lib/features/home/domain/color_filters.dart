@@ -1,8 +1,7 @@
 import 'dart:math';
 
+import 'package:color_generator/features/core/utils/color_utils.dart';
 import 'package:flutter/material.dart';
-
-import '../../core/utils/color_utils.dart';
 
 enum ColorFilters {
   grayTones(
@@ -28,6 +27,7 @@ enum ColorFilters {
   });
 
   static const double _colorOpacity = 1.0;
+  static const int _maxDoubleColorValue = 255;
 
   final Color Function() apply;
   final String title;
@@ -35,6 +35,7 @@ enum ColorFilters {
 
   static Color _filterGreyTones() {
     final colorItem = ColorUtils.getRandomColorItem();
+
     return Color.fromRGBO(
       colorItem,
       colorItem,
@@ -45,6 +46,7 @@ enum ColorFilters {
 
   static Color _filterMaterial() {
     final colorIndex = Random().nextInt(Colors.primaries.length);
+
     return Colors.primaries[colorIndex];
   }
 
@@ -59,8 +61,8 @@ enum ColorFilters {
       final variability = (Random().nextInt(21) - 10) * 2;
       final value = e + variability;
       outputList.add(
-        value > 255
-            ? 255
+        value > _maxDoubleColorValue
+            ? _maxDoubleColorValue
             : value < 0
                 ? 0
                 : value,
@@ -68,7 +70,7 @@ enum ColorFilters {
     }
 
     return Color.fromRGBO(
-      outputList[0],
+      outputList.first,
       outputList[1],
       outputList[2],
       _colorOpacity,

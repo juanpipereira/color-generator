@@ -22,7 +22,7 @@ void main() {
             colorFiltersControllerProvider
                 .overrideWith(_MockColorFiltersController.new),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Scaffold(
               body: ColorFilterTile(filter: _filter),
             ),
@@ -46,7 +46,7 @@ void main() {
             colorFiltersControllerProvider
                 .overrideWith(_MockColorFiltersController.new),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Scaffold(
               body: ColorFilterTile(filter: _filter),
             ),
@@ -76,7 +76,7 @@ void main() {
             colorFiltersControllerProvider
                 .overrideWith(_MockColorFiltersController.new),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Scaffold(
               body: ColorFilterTile(filter: ColorFilters.onlyMaterialColors),
             ),

@@ -1,7 +1,6 @@
+import 'package:color_generator/features/home/domain/color_filters.dart';
+import 'package:color_generator/features/home/presentation/widgets/color_filter_tile.dart';
 import 'package:flutter/material.dart';
-
-import '../../domain/color_filters.dart';
-import 'color_filter_tile.dart';
 
 class ColorFiltersDialog extends StatelessWidget {
   const ColorFiltersDialog({super.key});

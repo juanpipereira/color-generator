@@ -1,4 +1,4 @@
-import 'selected_color_controller.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/selected_color_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'favorite_colors_controller.g.dart';

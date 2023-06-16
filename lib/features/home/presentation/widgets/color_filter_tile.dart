@@ -1,8 +1,7 @@
+import 'package:color_generator/features/home/domain/color_filters.dart';
+import 'package:color_generator/features/home/presentation/controllers/color_filters_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../domain/color_filters.dart';
-import '../controllers/color_filters_controller.dart';
 
 class ColorFilterTile extends ConsumerWidget {
   const ColorFilterTile({

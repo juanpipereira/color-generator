@@ -1,8 +1,7 @@
+import 'package:color_generator/features/home/presentation/controllers/background_color_controller.dart';
+import 'package:color_generator/features/home/presentation/controllers/color_filters_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../controllers/background_color_controller.dart';
-import '../controllers/color_filters_controller.dart';
 
 class ColoredBackground extends ConsumerWidget {
   const ColoredBackground({
@@ -20,7 +19,7 @@ class ColoredBackground extends ConsumerWidget {
       onTap: () => ref
           .read(backgroundColorControllerProvider.notifier)
           .setRandomColor(selectedColorFilter),
-      child: Container(
+      child: ColoredBox(
         color: ref.watch(backgroundColorControllerProvider) ??
             Theme.of(context).colorScheme.surface,
         child: Center(child: child),

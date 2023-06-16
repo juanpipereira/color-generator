@@ -1,7 +1,6 @@
+import 'package:color_generator/features/favorites/presentation/controllers/selected_color_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../controllers/selected_color_controller.dart';
 
 class ColorPreview extends StatelessWidget {
   const ColorPreview({super.key});
@@ -18,6 +17,7 @@ class ColorPreview extends StatelessWidget {
       child: Consumer(
         builder: (context, ref, _) {
           final color = ref.watch(selectedColorControllerProvider);
+
           return Container(
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(

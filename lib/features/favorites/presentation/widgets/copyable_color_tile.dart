@@ -1,4 +1,4 @@
-import '../../../core/domain/extensions/color_extension.dart';
+import 'package:color_generator/features/core/domain/extensions/color_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

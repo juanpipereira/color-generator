@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-const _colors = const [Colors.red, Colors.amber, Colors.green];
+const _colors = [Colors.red, Colors.amber, Colors.green];
 
 class _MockFavoritesController extends FavoriteColorsController {
   @override
@@ -22,7 +22,7 @@ void main() {
             favoriteColorsControllerProvider
                 .overrideWith(_MockFavoritesController.new),
           ],
-          child: MaterialApp(
+          child: const MaterialApp(
             home: Scaffold(
               body: FavoriteColorList(),
             ),
