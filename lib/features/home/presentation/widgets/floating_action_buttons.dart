@@ -1,10 +1,9 @@
+import 'package:color_generator/features/core/presentation/widgets/custom_floating_action_button.dart';
+import 'package:color_generator/features/favorites/presentation/controllers/favorite_colors_controller.dart';
+import 'package:color_generator/features/home/presentation/controllers/background_color_controller.dart';
+import 'package:color_generator/features/home/presentation/widgets/color_filters_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../../core/presentation/widgets/custom_floating_action_button.dart';
-import '../../../favorites/presentation/controllers/favorite_colors_controller.dart';
-import '../controllers/background_color_controller.dart';
-import 'color_filters_dialog.dart';
 
 class FloatingActionButtons extends StatelessWidget {
   const FloatingActionButtons({super.key});

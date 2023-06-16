@@ -14,13 +14,13 @@ void main() {
           const minSize = 30.0;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: FavoriteColorItem(
                   color: color,
                   maxSize: maxSize,
                   minSize: minSize,
-                  onTap: () {},
+                  onTap: null,
                 ),
               ),
             ),
@@ -54,14 +54,14 @@ void main() {
           const minSize = 30.0;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: FavoriteColorItem(
                   color: color,
                   isSelected: true,
                   maxSize: maxSize,
                   minSize: minSize,
-                  onTap: () {},
+                  onTap: null,
                 ),
               ),
             ),
@@ -92,14 +92,14 @@ void main() {
           const minSize = 30.0;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: FavoriteColorItem(
                   color: color,
                   isSelected: false,
                   maxSize: maxSize,
                   minSize: minSize,
-                  onTap: () {},
+                  onTap: null,
                 ),
               ),
             ),

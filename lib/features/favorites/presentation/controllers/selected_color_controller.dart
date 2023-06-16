@@ -13,5 +13,5 @@ class SelectedColorController extends _$SelectedColorController {
     state = color;
   }
 
-  void unselect(Color color) => state == color ? state = null : () {};
+  void unselect(Color color) => state == color ? state = null : null;
 }

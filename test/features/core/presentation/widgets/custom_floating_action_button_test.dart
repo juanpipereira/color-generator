@@ -12,12 +12,12 @@ main() {
           const icon = Icons.abc;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 floatingActionButton: CustomFloatingActionButton(
                   heroTag: 'hero-tag',
                   icon: icon,
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
@@ -35,12 +35,12 @@ main() {
           const heroTag = 'hero-tag';
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 floatingActionButton: CustomFloatingActionButton(
                   heroTag: heroTag,
                   icon: Icons.key,
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
@@ -72,7 +72,7 @@ main() {
           const inactiveTooltip = 'inactive';
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 floatingActionButton: CustomFloatingActionButton.withStates(
                   activeIcon: Icons.check,
@@ -81,7 +81,7 @@ main() {
                   inactiveIcon: Icons.close,
                   inactiveTooltip: inactiveTooltip,
                   isActive: true,
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
@@ -103,7 +103,7 @@ main() {
           const inactiveTooltip = 'inactive';
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 floatingActionButton: CustomFloatingActionButton.withStates(
                   activeIcon: Icons.check,
@@ -112,7 +112,7 @@ main() {
                   inactiveIcon: Icons.close,
                   inactiveTooltip: inactiveTooltip,
                   isActive: false,
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),

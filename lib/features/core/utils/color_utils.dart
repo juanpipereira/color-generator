@@ -1,8 +1,7 @@
 import 'dart:math';
 
+import 'package:color_generator/features/home/domain/color_filters.dart';
 import 'package:flutter/material.dart';
-
-import '../../home/domain/color_filters.dart';
 
 class ColorUtils {
   static Color _getAnyRandomColor() {
@@ -15,7 +14,7 @@ class ColorUtils {
     }
 
     return Color.fromRGBO(
-      colorItems[0],
+      colorItems.first,
       colorItems[1],
       colorItems[2],
       opacity,
@@ -24,6 +23,7 @@ class ColorUtils {
 
   static int getRandomColorItem() {
     const colorItemLimit = 256;
+
     return Random().nextInt(colorItemLimit);
   }
 

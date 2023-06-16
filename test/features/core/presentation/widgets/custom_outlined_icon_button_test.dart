@@ -12,12 +12,12 @@ main() {
           const icon = Icons.abc;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: CustomOutlinedIconButton(
                   icon: icon,
                   label: '',
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
@@ -35,12 +35,12 @@ main() {
           const label = 'label';
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: CustomOutlinedIconButton(
                   icon: Icons.abc,
                   label: label,
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
@@ -63,12 +63,12 @@ main() {
           const icon = Icons.abc;
 
           await tester.pumpWidget(
-            MaterialApp(
+            const MaterialApp(
               home: Scaffold(
                 body: CustomOutlinedIconButton.error(
                   icon: icon,
                   label: '',
-                  onPressed: () {},
+                  onPressed: null,
                 ),
               ),
             ),
