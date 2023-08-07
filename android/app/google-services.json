@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "443007787394",
+    "project_id": "color-generator-17b00",
+    "storage_bucket": "color-generator-17b00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443007787394:android:de6563020dd77453a76f9b",
+        "android_client_info": {
+          "package_name": "color_generator.color_generator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443007787394-lplu37e5h2nvgfv6v5tc85va8mcgd2l0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsFY8Rjhr-FencysVr7Yoqu59Ilbi6ktU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443007787394-lplu37e5h2nvgfv6v5tc85va8mcgd2l0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
