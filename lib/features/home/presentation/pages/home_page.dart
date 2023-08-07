@@ -1,4 +1,3 @@
-import 'package:color_generator/features/auth/presentation/controllers/auth_state_controller.dart';
 import 'package:color_generator/features/core/presentation/widgets/custom_appbar.dart';
 import 'package:color_generator/features/core/presentation/widgets/custom_drawer.dart';
 import 'package:color_generator/features/favorites/presentation/controllers/favorite_colors_controller.dart';
