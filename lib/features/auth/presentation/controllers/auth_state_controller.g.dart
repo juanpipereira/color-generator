@@ -1,26 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'background_color_controller.dart';
+part of 'auth_state_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$backgroundColorControllerHash() =>
-    r'f077f7e9af2da8be1e19d2f8a8ff5e72613def40';
+String _$authStateControllerHash() =>
+    r'2b84a74839d49508a444c607a3deec7d0339027f';
 
-/// See also [BackgroundColorController].
-@ProviderFor(BackgroundColorController)
-final backgroundColorControllerProvider =
-    AutoDisposeNotifierProvider<BackgroundColorController, Color?>.internal(
-  BackgroundColorController.new,
-  name: r'backgroundColorControllerProvider',
+/// See also [AuthStateController].
+@ProviderFor(AuthStateController)
+final authStateControllerProvider =
+    AutoDisposeStreamNotifierProvider<AuthStateController, User?>.internal(
+  AuthStateController.new,
+  name: r'authStateControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$backgroundColorControllerHash,
+      : _$authStateControllerHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$BackgroundColorController = AutoDisposeNotifier<Color?>;
+typedef _$AuthStateController = AutoDisposeStreamNotifier<User?>;
 // ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions

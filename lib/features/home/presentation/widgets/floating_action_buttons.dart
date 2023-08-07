@@ -35,7 +35,7 @@ class FloatingActionButtons extends StatelessWidget {
                 ref.watch(backgroundColorControllerProvider);
             final isColorFavorite = ref.watch(
               favoriteColorsControllerProvider.select(
-                (colors) => colors.contains(backgroundColor),
+                (colors) => colors.value?.contains(backgroundColor) ?? false,
               ),
             );
 

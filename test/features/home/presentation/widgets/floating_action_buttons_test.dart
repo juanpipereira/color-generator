@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:color_generator/features/core/presentation/widgets/custom_floating_action_button.dart';
 import 'package:color_generator/features/favorites/presentation/controllers/favorite_colors_controller.dart';
 import 'package:color_generator/features/home/presentation/controllers/background_color_controller.dart';
@@ -7,6 +9,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 const _color = Colors.pink;
+const _differentColor = Colors.amber;
 
 class _MockBackgroundColorController extends BackgroundColorController {
   @override
@@ -18,9 +21,15 @@ class _MockNullBackgroundColorController extends BackgroundColorController {
   Color? build() => null;
 }
 
+class _MockDifferentBackgroundColorController
+    extends BackgroundColorController {
+  @override
+  Color? build() => _differentColor;
+}
+
 class _MockFavoriteColorsController extends FavoriteColorsController {
   @override
-  List<Color> build() => [_color];
+  Stream<List<Color>> build() => Stream.value([_color]);
 }
 
 void main() {
@@ -37,7 +46,9 @@ void main() {
             ProviderScope(
               overrides: [
                 backgroundColorControllerProvider
-                    .overrideWith(_MockBackgroundColorController.new)
+                    .overrideWith(_MockBackgroundColorController.new),
+                favoriteColorsControllerProvider
+                    .overrideWith(_MockFavoriteColorsController.new),
               ],
               child: const MaterialApp(
                 home: Scaffold(
@@ -65,7 +76,9 @@ void main() {
             ProviderScope(
               overrides: [
                 backgroundColorControllerProvider
-                    .overrideWith(_MockNullBackgroundColorController.new)
+                    .overrideWith(_MockNullBackgroundColorController.new),
+                favoriteColorsControllerProvider
+                    .overrideWith(_MockFavoriteColorsController.new),
               ],
               child: const MaterialApp(
                 home: Scaffold(
@@ -131,7 +144,9 @@ void main() {
             ProviderScope(
               overrides: [
                 backgroundColorControllerProvider
-                    .overrideWith(_MockBackgroundColorController.new)
+                    .overrideWith(_MockDifferentBackgroundColorController.new),
+                favoriteColorsControllerProvider
+                    .overrideWith(_MockFavoriteColorsController.new),
               ],
               child: const MaterialApp(
                 home: Scaffold(

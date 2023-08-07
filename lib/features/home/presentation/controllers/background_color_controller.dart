@@ -15,6 +15,7 @@ class BackgroundColorController extends _$BackgroundColorController {
   }
 
   void setRandomColor(ColorFilters? filter) {
-    state = ColorUtils.getRandomColor(filter: filter);
+    final newColor = ColorUtils.getRandomColor(filter: filter);
+    state = newColor;
   }
 }

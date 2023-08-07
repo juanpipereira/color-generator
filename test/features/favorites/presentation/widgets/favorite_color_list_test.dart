@@ -9,7 +9,7 @@ const _colors = [Colors.red, Colors.amber, Colors.green];
 
 class _MockFavoritesController extends FavoriteColorsController {
   @override
-  List<Color> build() => _colors;
+  Stream<List<Color>> build() => Stream.value(_colors);
 }
 
 void main() {

@@ -17,34 +17,44 @@ class FavoriteColorList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final favoriteColors = ref.watch(favoriteColorsControllerProvider);
 
-    return SizedBox(
-      height: _itemHeight,
-      width: double.infinity,
-      child: ListView.separated(
-        itemCount: favoriteColors.length,
-        padding: EdgeInsets.symmetric(
-          horizontal: (MediaQuery.of(
-                    context,
-                  ).size.width /
-                  _alignmentFactor) -
-              _minSize / _alignmentFactor,
-        ),
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (_, index) {
-          final selectedColor = ref.watch(selectedColorControllerProvider);
+    return favoriteColors.when(
+      data: (colors) => SizedBox(
+        height: _itemHeight,
+        width: double.infinity,
+        child: ListView.separated(
+          itemCount: colors.length,
+          padding: EdgeInsets.symmetric(
+            horizontal: (MediaQuery.of(
+                      context,
+                    ).size.width /
+                    _alignmentFactor) -
+                _minSize / _alignmentFactor,
+          ),
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (_, index) {
+            final selectedColor = ref.watch(selectedColorControllerProvider);
 
-          return FavoriteColorItem(
-            color: favoriteColors[index],
-            isSelected: selectedColor == favoriteColors[index],
-            onTap: () => ref
-                .read(selectedColorControllerProvider.notifier)
-                .select(favoriteColors[index]),
-            maxSize: _maxSize,
-            minSize: _minSize,
-          );
-        },
-        separatorBuilder: (_, __) => const SizedBox(width: _separatorWidth),
+            return FavoriteColorItem(
+              color: colors[index],
+              isSelected: selectedColor == colors[index],
+              onTap: () => ref
+                  .read(
+                    selectedColorControllerProvider.notifier,
+                  )
+                  .select(
+                    colors[index],
+                  ),
+              maxSize: _maxSize,
+              minSize: _minSize,
+            );
+          },
+          separatorBuilder: (_, __) => const SizedBox(width: _separatorWidth),
+        ),
       ),
+      error: (error, stackTrace) => Center(
+        child: Text(error.toString()),
+      ),
+      loading: () => const CircularProgressIndicator(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:color_generator/features/core/domain/extensions/color_extension.dart';
+import 'package:color_generator/features/favorites/presentation/widgets/copyable_color_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class CopyableColorTile extends StatelessWidget {
   const CopyableColorTile({
@@ -42,28 +42,7 @@ class CopyableColorTile extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          trailing: IconButton(
-            tooltip: 'Copy the selected color',
-            icon: const Icon(Icons.copy),
-            onPressed: () async {
-              await Clipboard.setData(
-                ClipboardData(text: color.toHex()),
-              );
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('You copied the color!'),
-                    duration: Duration(seconds: 1),
-                    showCloseIcon: true,
-                  ),
-                );
-              }
-            },
-            style: IconButton.styleFrom(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-            ),
-          ),
+          trailing: CopyableColorButton(color: color),
         ),
       ),
     );

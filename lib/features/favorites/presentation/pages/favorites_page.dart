@@ -22,67 +22,70 @@ class FavoritesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppbar(
-        pageTitle: _pageTitle,
-        title: title,
-      ),
-      body: Column(
-        children: [
-          const Spacer(),
-          const Spacer(flex: 2),
-          const ColorPreview(),
-          const Spacer(flex: 2),
-          Text(
-            'Copy a color you like',
-            style: TextStyle(
-              fontSize: _titleFontSize,
-              color: Theme.of(context).colorScheme.secondary,
-              fontWeight: FontWeight.w400,
+    return SafeArea(
+      child: Scaffold(
+        appBar: CustomAppbar(
+          pageTitle: _pageTitle,
+          title: title,
+        ),
+        body: Column(
+          children: [
+            const Spacer(),
+            const Spacer(flex: 2),
+            const ColorPreview(),
+            const Spacer(flex: 2),
+            Text(
+              'Copy a color you like',
+              style: TextStyle(
+                fontSize: _titleFontSize,
+                color: Theme.of(context).colorScheme.secondary,
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
-          const Spacer(flex: 1),
-          Consumer(
-            builder: (_, ref, __) {
-              final selectedColor = ref.watch(selectedColorControllerProvider);
-
-              return selectedColor == null
-                  ? SizedBox(
-                      height: _extraButtonsHeight,
-                      child: Text(
-                        'Select a color to preview it',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                        ),
-                      ),
-                    )
-                  : CopyableColorTile(color: selectedColor);
-            },
-          ),
-          const Spacer(flex: 7),
-          SizedBox(
-            height: _extraButtonsHeight,
-            child: Consumer(
+            const Spacer(flex: 1),
+            Consumer(
               builder: (_, ref, __) {
                 final selectedColor =
                     ref.watch(selectedColorControllerProvider);
 
-                return selectedColor != null
-                    ? OptionButtons(selectedColor: selectedColor)
-                    : const SizedBox.shrink();
+                return selectedColor == null
+                    ? SizedBox(
+                        height: _extraButtonsHeight,
+                        child: Text(
+                          'Select a color to preview it',
+                          style: TextStyle(
+                            color: Theme.of(context).colorScheme.secondary,
+                          ),
+                        ),
+                      )
+                    : CopyableColorTile(color: selectedColor);
               },
             ),
-          ),
-          const Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 30.0),
-              child: FavoriteColorList(),
+            const Spacer(flex: 7),
+            SizedBox(
+              height: _extraButtonsHeight,
+              child: Consumer(
+                builder: (_, ref, __) {
+                  final selectedColor =
+                      ref.watch(selectedColorControllerProvider);
+
+                  return selectedColor != null
+                      ? OptionButtons(selectedColor: selectedColor)
+                      : const SizedBox.shrink();
+                },
+              ),
             ),
-          ),
-        ],
+            const Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 30.0),
+                child: FavoriteColorList(),
+              ),
+            ),
+          ],
+        ),
+        drawer: const CustomDrawer(),
       ),
-      drawer: const CustomDrawer(),
     );
   }
 }

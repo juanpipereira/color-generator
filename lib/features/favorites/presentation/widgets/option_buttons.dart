@@ -29,9 +29,11 @@ class OptionButtons extends ConsumerWidget {
         CustomOutlinedIconButton.error(
           icon: Icons.delete_outline_rounded,
           label: 'Remove',
-          onPressed: () => ref
-              .read(favoriteColorsControllerProvider.notifier)
-              .toggle(selectedColor),
+          onPressed: () async {
+            await ref
+                .read(favoriteColorsControllerProvider.notifier)
+                .toggle(selectedColor);
+          },
           tooltip: 'Remove the color from favorites',
         ),
       ],

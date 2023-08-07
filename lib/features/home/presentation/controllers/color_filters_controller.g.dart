@@ -7,7 +7,7 @@ part of 'color_filters_controller.dart';
 // **************************************************************************
 
 String _$colorFiltersControllerHash() =>
-    r'23c47aa39ebc5a79f281d4d37de15bf63e4c57f1';
+    r'd246417c4b9fb38914a80c4858c2182fe63d1c2e';
 
 /// See also [ColorFiltersController].
 @ProviderFor(ColorFiltersController)
