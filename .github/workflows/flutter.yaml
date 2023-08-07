@@ -67,8 +67,8 @@
 #         run: |
 #           # run tests if `test` folder exists
 #           if [ -d test ]
-          then
-              flutter test -r expanded
-          else
-              echo "Tests not found."
-          fi
+          # then
+          #     flutter test -r expanded
+          # else
+          #     echo "Tests not found."
+          # fi
